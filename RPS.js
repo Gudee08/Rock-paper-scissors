@@ -41,3 +41,34 @@ function playRound(humanChoice, computerChoice) {
   computerChoice++;
   console.log("you lost! ${computerChoice} beats ${humanChoice");
 }
+
+function playgame() {
+  let computerchoice = 0;
+  let humanChoice = 0;
+  let round = 1;
+  round <= 5;
+  console.log(round);
+
+  const result = playRound();
+  if (round === "computerChoice") {
+    computerchoice++;
+    console.log("computer won");
+  } else if (round === "humanChoice") {
+    humanChoice++;
+    console.log("you won!");
+  } else {
+    console.log("this round is a tie!");
+  }
+  round++;
+}
+console.log("final score");
+console.log("human", humanchoice);
+console.log("computer", computerchoice);
+
+if (humanchoice > computerchoice) {
+  return "you won the game!";
+} else if (computerchoice > humanchoice) {
+  return "computer won the game!";
+} else {
+  return "the game is a tie!";
+}
